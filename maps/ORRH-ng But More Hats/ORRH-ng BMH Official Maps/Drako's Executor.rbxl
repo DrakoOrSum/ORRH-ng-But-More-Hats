@@ -1,0 +1,723 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="RBX0">
+		<Properties>
+			<Ref name="CurrentCamera">RBX1</Ref>
+			<double name="DistributedGameTime">317.50001655891538</double>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Workspace</string>
+			<Ref name="PrimaryPart">null</Ref>
+			<bool name="StreamingEnabled">false</bool>
+		</Properties>
+		<Item class="Camera" referent="RBX1">
+			<Properties>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<CoordinateFrame name="CoordinateFrame">
+					<X>10.0358133</X>
+					<Y>10.6619177</Y>
+					<Z>122.770721</Z>
+					<R00>-0.975108683</R00>
+					<R01>0.121733628</R01>
+					<R02>-0.185321331</R02>
+					<R10>-0</R10>
+					<R11>0.835806787</R11>
+					<R12>0.549023628</R12>
+					<R20>0.22172749</R20>
+					<R21>0.535357714</R21>
+					<R22>-0.815002441</R22>
+				</CoordinateFrame>
+				<float name="FieldOfView">70</float>
+				<CoordinateFrame name="Focus">
+					<X>10.406456</X>
+					<Y>9.56387043</Y>
+					<Z>124.400726</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<string name="Name">Camera</string>
+			</Properties>
+		</Item>
+		<Item class="Terrain" referent="RBX2">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">4</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">194</int>
+				<CoordinateFrame name="CFrame">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<string name="ClusterGridV2"></string>
+				<BinaryString name="ClusterGridV3"></BinaryString>
+				<float name="Elasticity">0.300000012</float>
+				<float name="Friction">0.5</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<token name="Material">256</token>
+				<string name="Name">Terrain</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">3</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<Vector3 name="size">
+					<X>2044</X>
+					<Y>252</Y>
+					<Z>2044</Z>
+				</Vector3>
+			</Properties>
+		</Item>
+		<Item class="Part" referent="RBX3">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">4</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">37</int>
+				<CoordinateFrame name="CFrame">
+					<X>0</X>
+					<Y>-0.610000014</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<float name="Elasticity">0.5</float>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<token name="Material">256</token>
+				<string name="Name">BasePlate</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">3</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<token name="formFactorRaw">1</token>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>512</X>
+					<Y>1.20000005</Y>
+					<Z>512</Z>
+				</Vector3>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="StarterPack" referent="RBX4">
+		<Properties>
+			<string name="Name">StarterPack</string>
+		</Properties>
+	</Item>
+	<Item class="StarterGui" referent="RBX5">
+		<Properties>
+			<string name="Name">StarterGui</string>
+			<bool name="ShowDevelopmentGui">true</bool>
+		</Properties>
+		<Item class="ScreenGui" referent="RBX6">
+			<Properties>
+				<string name="Name">ScreenGui</string>
+			</Properties>
+			<Item class="Frame" referent="RBX7">
+				<Properties>
+					<bool name="Active">false</bool>
+					<Color3 name="BackgroundColor3">4281019179</Color3>
+					<float name="BackgroundTransparency">0</float>
+					<Color3 name="BorderColor3">4279970357</Color3>
+					<int name="BorderSizePixel">1</int>
+					<bool name="ClipsDescendants">false</bool>
+					<bool name="Draggable">false</bool>
+					<string name="Name">Title</string>
+					<UDim2 name="Position">
+						<XS>0.0610000007</XS>
+						<XO>0</XO>
+						<YS>0.344999999</YS>
+						<YO>0</YO>
+					</UDim2>
+					<float name="Rotation">0</float>
+					<UDim2 name="Size">
+						<XS>0</XS>
+						<XO>502</XO>
+						<YS>0</YS>
+						<YO>60</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<token name="Style">0</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+			</Item>
+			<Item class="Frame" referent="RBX8">
+				<Properties>
+					<bool name="Active">false</bool>
+					<Color3 name="BackgroundColor3">4282861383</Color3>
+					<float name="BackgroundTransparency">0</float>
+					<Color3 name="BorderColor3">4279970357</Color3>
+					<int name="BorderSizePixel">1</int>
+					<bool name="ClipsDescendants">false</bool>
+					<bool name="Draggable">false</bool>
+					<string name="Name">Main</string>
+					<UDim2 name="Position">
+						<XS>0.0610000007</XS>
+						<XO>0</XO>
+						<YS>0.411000013</YS>
+						<YO>0</YO>
+					</UDim2>
+					<float name="Rotation">0</float>
+					<UDim2 name="Size">
+						<XS>0</XS>
+						<XO>502</XO>
+						<YS>0</YS>
+						<YO>357</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<token name="Style">0</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+			</Item>
+			<Item class="TextLabel" referent="RBX9">
+				<Properties>
+					<bool name="Active">false</bool>
+					<Color3 name="BackgroundColor3">4294967295</Color3>
+					<float name="BackgroundTransparency">1</float>
+					<Color3 name="BorderColor3">4279970357</Color3>
+					<int name="BorderSizePixel">1</int>
+					<bool name="ClipsDescendants">false</bool>
+					<bool name="Draggable">false</bool>
+					<token name="Font">2</token>
+					<token name="FontSize">8</token>
+					<string name="Name">Title</string>
+					<UDim2 name="Position">
+						<XS>0.0610000007</XS>
+						<XO>0</XO>
+						<YS>0.344999999</YS>
+						<YO>0</YO>
+					</UDim2>
+					<float name="Rotation">0</float>
+					<UDim2 name="Size">
+						<XS>0</XS>
+						<XO>413</XO>
+						<YS>0</YS>
+						<YO>60</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<string name="Text">Chaos Executor</string>
+					<Color3 name="TextColor3">4294967295</Color3>
+					<bool name="TextScaled">false</bool>
+					<Color3 name="TextStrokeColor3">4278190080</Color3>
+					<float name="TextStrokeTransparency">0</float>
+					<float name="TextTransparency">0</float>
+					<bool name="TextWrapped">false</bool>
+					<token name="TextXAlignment">2</token>
+					<token name="TextYAlignment">1</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+			</Item>
+			<Item class="TextButton" referent="RBX10">
+				<Properties>
+					<bool name="Active">true</bool>
+					<bool name="AutoButtonColor">true</bool>
+					<Color3 name="BackgroundColor3">4284440415</Color3>
+					<float name="BackgroundTransparency">0</float>
+					<Color3 name="BorderColor3">4279970357</Color3>
+					<int name="BorderSizePixel">1</int>
+					<bool name="ClipsDescendants">false</bool>
+					<bool name="Draggable">false</bool>
+					<token name="Font">3</token>
+					<token name="FontSize">8</token>
+					<bool name="Modal">false</bool>
+					<string name="Name">Execute</string>
+					<UDim2 name="Position">
+						<XS>0.0610000007</XS>
+						<XO>0</XO>
+						<YS>0.796000004</YS>
+						<YO>0</YO>
+					</UDim2>
+					<float name="Rotation">0</float>
+					<bool name="Selected">false</bool>
+					<UDim2 name="Size">
+						<XS>0</XS>
+						<XO>146</XO>
+						<YS>0</YS>
+						<YO>59</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<token name="Style">0</token>
+					<string name="Text">Execute</string>
+					<Color3 name="TextColor3">4294967295</Color3>
+					<bool name="TextScaled">false</bool>
+					<Color3 name="TextStrokeColor3">4278190080</Color3>
+					<float name="TextStrokeTransparency">0</float>
+					<float name="TextTransparency">0</float>
+					<bool name="TextWrapped">false</bool>
+					<token name="TextXAlignment">2</token>
+					<token name="TextYAlignment">1</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+				<Item class="Script" referent="RBX11">
+					<Properties>
+						<bool name="Disabled">false</bool>
+						<Content name="LinkedSource"><null></null></Content>
+						<string name="Name">Script</string>
+						<ProtectedString name="Source">local remote = script.Parent.RemoteEvent
+remote.OnServerEvent:connect(function(player , code)
+    local exec, err = loadstring(code)
+    if exec then
+        exec()
+    else
+        print(&quot;Error : &quot; .. tostring(err))
+    end
+end)</ProtectedString>
+					</Properties>
+				</Item>
+				<Item class="LocalScript" referent="RBX12">
+					<Properties>
+						<bool name="Disabled">false</bool>
+						<Content name="LinkedSource"><null></null></Content>
+						<string name="Name">LocalScript</string>
+						<ProtectedString name="Source">local remote = script.Parent.RemoteEvent
+local button = script.Parent
+local textbox = script.Parent.Parent.TextBox
+button.MouseButton1Click:connect(function()
+    local code = textbox.Text
+    remote:FireServer(code)
+end)</ProtectedString>
+					</Properties>
+				</Item>
+				<Item class="RemoteEvent" referent="RBX13">
+					<Properties>
+						<string name="Name">RemoteEvent</string>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="TextButton" referent="RBX14">
+				<Properties>
+					<bool name="Active">true</bool>
+					<bool name="AutoButtonColor">true</bool>
+					<Color3 name="BackgroundColor3">4284440415</Color3>
+					<float name="BackgroundTransparency">0</float>
+					<Color3 name="BorderColor3">4279970357</Color3>
+					<int name="BorderSizePixel">1</int>
+					<bool name="ClipsDescendants">false</bool>
+					<bool name="Draggable">false</bool>
+					<token name="Font">3</token>
+					<token name="FontSize">8</token>
+					<bool name="Modal">false</bool>
+					<string name="Name">Reset</string>
+					<UDim2 name="Position">
+						<XS>0.293000013</XS>
+						<XO>0</XO>
+						<YS>0.796000004</YS>
+						<YO>0</YO>
+					</UDim2>
+					<float name="Rotation">0</float>
+					<bool name="Selected">false</bool>
+					<UDim2 name="Size">
+						<XS>0</XS>
+						<XO>146</XO>
+						<YS>0</YS>
+						<YO>59</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<token name="Style">0</token>
+					<string name="Text">Reset</string>
+					<Color3 name="TextColor3">4294967295</Color3>
+					<bool name="TextScaled">false</bool>
+					<Color3 name="TextStrokeColor3">4278190080</Color3>
+					<float name="TextStrokeTransparency">0</float>
+					<float name="TextTransparency">0</float>
+					<bool name="TextWrapped">false</bool>
+					<token name="TextXAlignment">2</token>
+					<token name="TextYAlignment">1</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+				<Item class="Script" referent="RBX15">
+					<Properties>
+						<bool name="Disabled">false</bool>
+						<Content name="LinkedSource"><null></null></Content>
+						<string name="Name">Script</string>
+						<ProtectedString name="Source">local remote = script.Parent.RemoteEvent
+remote.OnServerEvent:connect(function(player)
+&#9;if player and player.Character then
+&#9;&#9;player:LoadCharacter()
+&#9;end
+end)</ProtectedString>
+					</Properties>
+				</Item>
+				<Item class="LocalScript" referent="RBX16">
+					<Properties>
+						<bool name="Disabled">false</bool>
+						<Content name="LinkedSource"><null></null></Content>
+						<string name="Name">LocalScript</string>
+						<ProtectedString name="Source">local button = script.Parent
+local remote = script.Parent.RemoteEvent
+
+button.MouseButton1Click:connect(function()
+    remote:FireServer()
+end)</ProtectedString>
+					</Properties>
+				</Item>
+				<Item class="RemoteEvent" referent="RBX17">
+					<Properties>
+						<string name="Name">RemoteEvent</string>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="TextButton" referent="RBX18">
+				<Properties>
+					<bool name="Active">true</bool>
+					<bool name="AutoButtonColor">true</bool>
+					<Color3 name="BackgroundColor3">4284440415</Color3>
+					<float name="BackgroundTransparency">0</float>
+					<Color3 name="BorderColor3">4279970357</Color3>
+					<int name="BorderSizePixel">1</int>
+					<bool name="ClipsDescendants">false</bool>
+					<bool name="Draggable">false</bool>
+					<token name="Font">3</token>
+					<token name="FontSize">8</token>
+					<bool name="Modal">false</bool>
+					<string name="Name">Clear</string>
+					<UDim2 name="Position">
+						<XS>0.193000004</XS>
+						<XO>0</XO>
+						<YS>0.796000004</YS>
+						<YO>0</YO>
+					</UDim2>
+					<float name="Rotation">0</float>
+					<bool name="Selected">false</bool>
+					<UDim2 name="Size">
+						<XS>0</XS>
+						<XO>112</XO>
+						<YS>0</YS>
+						<YO>59</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<token name="Style">0</token>
+					<string name="Text">Clear</string>
+					<Color3 name="TextColor3">4294967295</Color3>
+					<bool name="TextScaled">false</bool>
+					<Color3 name="TextStrokeColor3">4278190080</Color3>
+					<float name="TextStrokeTransparency">0</float>
+					<float name="TextTransparency">0</float>
+					<bool name="TextWrapped">false</bool>
+					<token name="TextXAlignment">2</token>
+					<token name="TextYAlignment">1</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+				<Item class="LocalScript" referent="RBX19">
+					<Properties>
+						<bool name="Disabled">false</bool>
+						<Content name="LinkedSource"><null></null></Content>
+						<string name="Name">LocalScript</string>
+						<ProtectedString name="Source">local button = script.Parent
+local textbox = script.Parent.Parent.Textbox
+button.MouseButtonlClick:connect(function()
+&#9;textbox.text = &quot;&quot;
+end)</ProtectedString>
+					</Properties>
+				</Item>
+			</Item>
+			<Item class="TextBox" referent="RBX20">
+				<Properties>
+					<bool name="Active">true</bool>
+					<Color3 name="BackgroundColor3">4294967295</Color3>
+					<float name="BackgroundTransparency">1</float>
+					<Color3 name="BorderColor3">4279970357</Color3>
+					<int name="BorderSizePixel">1</int>
+					<bool name="ClearTextOnFocus">true</bool>
+					<bool name="ClipsDescendants">false</bool>
+					<bool name="Draggable">false</bool>
+					<token name="Font">1</token>
+					<token name="FontSize">6</token>
+					<bool name="MultiLine">false</bool>
+					<string name="Name">TextBox</string>
+					<UDim2 name="Position">
+						<XS>0.0610000007</XS>
+						<XO>0</XO>
+						<YS>0.411000013</YS>
+						<YO>0</YO>
+					</UDim2>
+					<float name="Rotation">0</float>
+					<UDim2 name="Size">
+						<XS>0</XS>
+						<XO>413</XO>
+						<YS>0</YS>
+						<YO>293</YO>
+					</UDim2>
+					<token name="SizeConstraint">0</token>
+					<string name="Text">TextBox</string>
+					<Color3 name="TextColor3">4294967295</Color3>
+					<bool name="TextScaled">false</bool>
+					<Color3 name="TextStrokeColor3">4278190080</Color3>
+					<float name="TextStrokeTransparency">0</float>
+					<float name="TextTransparency">0</float>
+					<bool name="TextWrapped">false</bool>
+					<token name="TextXAlignment">0</token>
+					<token name="TextYAlignment">0</token>
+					<bool name="Visible">true</bool>
+					<int name="ZIndex">1</int>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="SoundService" referent="RBX21">
+		<Properties>
+			<token name="AmbientReverb">0</token>
+			<float name="DistanceFactor">10</float>
+			<float name="DopplerScale">1</float>
+			<string name="Name">Soundscape</string>
+			<float name="RolloffScale">1</float>
+		</Properties>
+	</Item>
+	<Item class="CollectionService" referent="RBX22">
+		<Properties>
+			<string name="Name">CollectionService</string>
+		</Properties>
+	</Item>
+	<Item class="PhysicsService" referent="RBX23">
+		<Properties>
+			<string name="Name">PhysicsService</string>
+		</Properties>
+	</Item>
+	<Item class="BadgeService" referent="RBX24">
+		<Properties>
+			<string name="Name">BadgeService</string>
+		</Properties>
+	</Item>
+	<Item class="Geometry" referent="RBX25">
+		<Properties>
+			<string name="Name">Geometry</string>
+		</Properties>
+	</Item>
+	<Item class="RenderHooksService" referent="RBX26">
+		<Properties>
+			<string name="Name">RenderHooksService</string>
+		</Properties>
+	</Item>
+	<Item class="SocialService" referent="RBX27">
+		<Properties>
+			<string name="Name">SocialService</string>
+		</Properties>
+	</Item>
+	<Item class="GamePassService" referent="RBX28">
+		<Properties>
+			<string name="Name">GamePassService</string>
+		</Properties>
+	</Item>
+	<Item class="Debris" referent="RBX29">
+		<Properties>
+			<int name="MaxItems">1000</int>
+			<string name="Name">Debris</string>
+		</Properties>
+	</Item>
+	<Item class="TimerService" referent="RBX30">
+		<Properties>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+	<Item class="ScriptInformationProvider" referent="RBX31">
+		<Properties>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+	<Item class="CookiesService" referent="RBX32">
+		<Properties>
+			<string name="Name">CookiesService</string>
+		</Properties>
+	</Item>
+	<Item class="TeleportService" referent="RBX33">
+		<Properties>
+			<string name="Name">Teleport Service</string>
+		</Properties>
+	</Item>
+	<Item class="Players" referent="RBX34">
+		<Properties>
+			<bool name="CharacterAutoLoads">true</bool>
+			<string name="Name">Players</string>
+		</Properties>
+	</Item>
+	<Item class="FWService" referent="RBX35">
+		<Properties>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+	<Item class="UserInputService" referent="RBX36">
+		<Properties>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+	<Item class="ContextActionService" referent="RBX37">
+		<Properties>
+			<string name="Name">ContextActionService</string>
+		</Properties>
+	</Item>
+	<Item class="ScriptService" referent="RBX38">
+		<Properties>
+			<string name="Name">Instance</string>
+		</Properties>
+	</Item>
+	<Item class="AssetService" referent="RBX39">
+		<Properties>
+			<string name="Name">AssetService</string>
+		</Properties>
+	</Item>
+	<Item class="Selection" referent="RBX40">
+		<Properties>
+			<string name="Name">Selection</string>
+		</Properties>
+	</Item>
+	<Item class="ServerScriptService" referent="RBX41">
+		<Properties>
+			<string name="Name">ServerScriptService</string>
+		</Properties>
+	</Item>
+	<Item class="ServerStorage" referent="RBX42">
+		<Properties>
+			<string name="Name">ServerStorage</string>
+		</Properties>
+	</Item>
+	<Item class="ReplicatedStorage" referent="RBX43">
+		<Properties>
+			<string name="Name">ReplicatedStorage</string>
+		</Properties>
+	</Item>
+	<Item class="Lighting" referent="RBX44">
+		<Properties>
+			<Color3 name="Ambient">4278190080</Color3>
+			<float name="Brightness">1</float>
+			<Color3 name="ColorShift_Bottom">4278190080</Color3>
+			<Color3 name="ColorShift_Top">4278190080</Color3>
+			<Color3 name="FogColor">4290822336</Color3>
+			<float name="FogEnd">100000</float>
+			<float name="FogStart">0</float>
+			<float name="GeographicLatitude">41.7332993</float>
+			<bool name="GlobalShadows">true</bool>
+			<string name="Name">Lighting</string>
+			<Color3 name="OutdoorAmbient">4286611584</Color3>
+			<bool name="Outlines">true</bool>
+			<Color3 name="ShadowColor">4289967032</Color3>
+			<string name="TimeOfDay">14:00:00</string>
+		</Properties>
+	</Item>
+	<Item class="ChangeHistoryService" referent="RBX45">
+		<Properties>
+			<string name="Name">ChangeHistoryService</string>
+		</Properties>
+	</Item>
+	<Item class="Teams" referent="RBX46">
+		<Properties>
+			<string name="Name">Teams</string>
+		</Properties>
+	</Item>
+	<Item class="TestService" referent="RBX47">
+		<Properties>
+			<bool name="AutoRuns">true</bool>
+			<string name="Description"></string>
+			<bool name="Is30FpsThrottleEnabled">true</bool>
+			<bool name="IsPhysicsEnvironmentalThrottled">true</bool>
+			<bool name="IsSleepAllowed">true</bool>
+			<string name="Name">TestService</string>
+			<int name="NumberOfPlayers">0</int>
+			<double name="Timeout">10</double>
+		</Properties>
+	</Item>
+</roblox>
