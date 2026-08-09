@@ -1,0 +1,27 @@
+{
+	"Name": "March 2007",
+	"Description": "The earliest available Roblox client. A very primitive version of Roblox, lacking most of the features that can be seen in the present client.",
+	"Signature": "None",
+	"ClientWillDieIfAHttpRedirectHappens": true,
+	"Player": {
+		"ExecutableName": "Roblox.exe",
+		"LaunchArguments": "-script \"{0}\""
+	},
+	"Studio": {
+		"Type": "App",
+		"ExecutableName": "Roblox.exe"
+	},
+	"Server": {
+		"ExecutableName": "Roblox.exe",
+		"LaunchArguments": "-script \"{0}\""
+	},
+	"CharacterCompatibility": {
+		"TShirts": false,
+		"Hats": false,
+		"ShirtsAndPants": false,
+		"Faces": false,
+		"Heads": false,
+		"ExtendedColours": false,
+		"BodyParts": false
+	}
+}
