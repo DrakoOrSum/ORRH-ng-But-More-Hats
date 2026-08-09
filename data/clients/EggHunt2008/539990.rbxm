@@ -1,980 +1,0 @@
-<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
-	<External>null</External>
-	<External>nil</External>
-	<Item class="Script" referent="RBX0">
-		<Properties>
-			<bool name="Disabled">false</bool>
-			<Content name="LinkedSource"><null></null></Content>
-			<string name="Name">BunnyLib</string>
-			<string name="Source">print(&quot;BunnyLib {ORRH Edition} loaded&quot;)
-script.archivable = false
---local nonlethal = {1, 2, 3, 4, 6, 7, 11}
---local botEggsPerVisit = 30
-local maxEggs = 30
-local eggs = 0
-local eggdb = {}
-local nonlethal = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
-function awardEgg(player, eggnum)
-	if eggnum &gt; 0 and eggnum &lt; 12 then
-		local sound = player.Character.PrimaryPart:findFirstChild(&quot;VictorySound&quot;)
-		if sound == nil then 
-			sound = Instance.new(&quot;Sound&quot;)
-			sound.Name = &quot;VictorySound&quot;
-			sound.SoundId = &quot;rbxasset://sounds\\victory.wav&quot;
-			sound.Parent = player.Character.PrimaryPart
-		end
-		sound:play()
-	end
-end
-function onTryPickUp(part, eggpart, eggnum)
-	-- verify
-	-- delete egg
-	-- award asset
-	local h = part.Parent:FindFirstChild(&quot;Humanoid&quot;)
-	if (h ~= nil) then
-		local p = game.Players:GetPlayerFromCharacter(h.Parent)
-		if (p ~= nil) then
-			local pickup = eggpart:FindFirstChild(&quot;PickUpOk&quot;)
-			if (pickup ~= nil and pickup.Value == true) then
-				eggpart:remove()	
-				awardEgg(p, eggnum)
-			end
-		end
-	end
-end
-
-function makeEgg(num, pos)
-	local meshname = &quot;EggMesh&quot; .. num
-	local scriptname = &quot;EggScript&quot; .. num
-	local egg = Instance.new(&quot;Part&quot;)
-	egg.archivable = false
-	egg.Name = string.format(&quot;%d&quot;, num)
-	egg.Locked = true
-	egg.BackSurface = 0
-	egg.BottomSurface = 0
-	egg.FrontSurface = 0
-	egg.LeftSurface = 0
-	egg.RightSurface = 0
-	egg.TopSurface = 0
-	egg.formFactor = 0
-	egg.Shape = 0
-	egg.Size = Vector3.new(2,2,2)
-	local tag = Instance.new(&quot;BoolValue&quot;)
-	tag.Name = &quot;PickUpOk&quot;
-	tag.Value = false
-	tag.Parent = egg
-	local mesh = script:FindFirstChild(meshname):clone()
-	mesh.Parent = egg
-	local s = script:FindFirstChild(scriptname):clone()
-	s.Parent = egg
-	s.Disabled = false
-	egg.Position = pos
-	egg.Parent = game.Workspace
-	egg.Touched:connect(function(part) onTryPickUp(part, egg, num) end)
-	eggdb[egg] = true
-	eggs = eggs + 1
-	return egg
-end
-
-function eggDistributionFunction()
-	-- returns egg number to drop of the non-lethal eggs
-	for m=1,#nonlethal do
-		if (math.random() &lt; .4) then return nonlethal[m] end
-	end
-	return nonlethal[#nonlethal]
-end
-function dropNonLethalEggs()
-	while true do
-		if eggs &lt; maxEggs then
-			local v = Vector3.new(math.random() - .5, math.random() / 2, math.random() - .5)
-			makeEgg(eggDistributionFunction(), (v * 400))
-		end
-		wait(1)
-	end
-end
-
-function onChildRemoved(part)
-	if eggdb[part] then
-		eggdb[part] = nil
-		eggs = eggs - 1
-	end
-end
-workspace.ChildRemoved:connect(onChildRemoved)
-dropNonLethalEggs()
-</string>
-			<bool name="archivable">true</bool>
-		</Properties>
-		<Item class="SpecialMesh" referent="RBX1">
-			<Properties>
-				<Content name="MeshId"><url>http://www.roblox.com/asset/?id=1527559</url></Content>
-				<token name="MeshType">5</token>
-				<string name="Name">EggMesh1</string>
-				<Vector3 name="Scale">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<Content name="TextureId"><url>http://www.roblox.com/asset/?id=1527556</url></Content>
-				<Vector3 name="VertexColor">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="SpecialMesh" referent="RBX2">
-			<Properties>
-				<Content name="MeshId"><url>http://www.roblox.com/asset/?id=1527559</url></Content>
-				<token name="MeshType">5</token>
-				<string name="Name">EggMesh2</string>
-				<Vector3 name="Scale">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<Content name="TextureId"><url>http://www.roblox.com/asset/?id=1529455</url></Content>
-				<Vector3 name="VertexColor">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="Script" referent="RBX3">
-			<Properties>
-				<bool name="Disabled">true</bool>
-				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">EggScript1</string>
-				<string name="Source">script.Parent.PickUpOk.Value = true</string>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="Script" referent="RBX4">
-			<Properties>
-				<bool name="Disabled">true</bool>
-				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">EggScript2</string>
-				<string name="Source">script.Parent.PickUpOk.Value = true
-
-local b = Instance.new(&quot;BodyVelocity&quot;)
-b.Parent = script.Parent
-
-r = game:service(&quot;RunService&quot;)
-
-last_sound_time = r.Stepped:wait()
-
-function onTouch(part)
-
-	local now = r.Stepped:wait()
-
-	if (now - last_sound_time &gt; .1) then
-		last_sound_time = now
-	else
-		return
-	end
-
-	local sound = script.Parent:findFirstChild(&quot;Boing&quot;)
-	if sound == nil then 
-		sound = Instance.new(&quot;Sound&quot;)
-		sound.Name = &quot;Boing&quot;
-		sound.SoundId = &quot;rbxasset://sounds\\short spring sound.wav&quot;
-		sound.Volume = 1
-		sound.Parent = script.Parent
-	end
-	sound:play()
-	wait(.5)
-end
-
-while true do
-	b.maxForce = Vector3.new(10000, 10000 , 10000)
-	b.velocity = Vector3.new(math.random(-20,20),math.random(10,100),math.random(-20,20))
-	wait(.5)
-	b.maxForce = Vector3.new(0,0,0)
-	wait(3)
-end</string>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="Script" referent="RBX5">
-			<Properties>
-				<bool name="Disabled">true</bool>
-				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">EggScript3</string>
-				<string name="Source">local pnum = 0
-local solution = nil
-local con = nil
-local ccon = nil
-local boardPart = nil
-
-function createPuzzle(pos)
-	local p = Instance.new(&quot;Part&quot;)
-	p.formFactor = 2
-	p.Size = Vector3.new(8,.4,8)
-	p.Position = pos
-	p.BrickColor = BrickColor.new(21)
-	p.Locked = true
-
-	local d = Instance.new(&quot;Decal&quot;)
-	d.Face = 1
-
-	if pnum == 1 then
-		d.Texture = &quot;http://www.roblox.com/asset/?id=1530995&quot;
-		solution = &quot;qf5&quot;
-	end
-
-	if pnum == 2 then
-		d.Texture = &quot;http://www.roblox.com/asset/?id=1530996&quot;
-		solution = &quot;rg8&quot;
-	end
-
-	if pnum == 3 then
-		d.Texture = &quot;http://www.roblox.com/asset/?id=1530999&quot;
-		solution = &quot;ne7&quot;
-	end
-
-	if pnum == 4 then
-		d.Texture = &quot;http://www.roblox.com/asset/?id=1531000&quot;
-		solution = &quot;nf6&quot;
-	end
-
-	d.Parent = p
-	p.Parent = game.Workspace
-
-	boardPart = p
-end
-
-function onChatted(msg, recipient, speaker)
-
-	-- convert to all lower case
-	local source = string.lower(speaker.Name)
-	msg = string.lower(msg)
-
-	if (string.find(msg, solution) ~= nil) then
-		ccon:disconnect()
-		if (boardPart ~= nil) then boardPart.BrickColor = BrickColor.new(37) end
-		script.Parent.EggMesh3.VertexColor = Vector3.new(0,1,0)
-		script.Parent.PickUpOk.Value = true
-
-		local m = speaker:FindFirstChild(&quot;ChessMsg&quot;)
-		if ( m ~= nil ) then m.Parent = nil end
-
-		m = Instance.new(&quot;Message&quot;)
-		m.Text = &quot;You solved it!&quot;
-		m.Parent = speaker
-		wait(5)
-		m.Parent = nil
-		wait(2)
-		boardPart.Parent = nil
-	end
-
-
-end
-
-
-function onTouch(part)
-	local h = part.Parent:FindFirstChild(&quot;Humanoid&quot;)
-	local player = game.Players:GetPlayerFromCharacter(part.Parent)
-	if (h ~= nil and player ~= nil) then
-		if (player:FindFirstChild(&quot;ChessMsg&quot;) == nil) then
-			con:disconnect()
-
-			script.Parent.EggMesh3.VertexColor = Vector3.new(1,0,0) 
-
-			pnum = (string.byte(string.lower(player.Name)) % 4) + 1 -- generate a puzzle just for this guy
-
-			createPuzzle(script.Parent.Position + Vector3.new(0,10,0))
-
-			local m = Instance.new(&quot;Message&quot;)
-			m.Name = &quot;ChessMsg&quot;
-			m.Text = &quot;White to move...&quot;
-			m.Parent = player
-
-			ccon = player.Chatted:connect(function(msg, recipient) onChatted(msg, recipient, player) end) 
-
-		end
-	end
-end
-
-con = script.Parent.Touched:connect(onTouch)</string>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="SpecialMesh" referent="RBX6">
-			<Properties>
-				<Content name="MeshId"><url>http://www.roblox.com/asset/?id=1527559</url></Content>
-				<token name="MeshType">5</token>
-				<string name="Name">EggMesh3</string>
-				<Vector3 name="Scale">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<Content name="TextureId"><url>http://www.roblox.com/asset/?id=1529463</url></Content>
-				<Vector3 name="VertexColor">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="Script" referent="RBX7">
-			<Properties>
-				<bool name="Disabled">true</bool>
-				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">EggScript4</string>
-				<string name="Source">local friends = {}
-
-
-function updateEgg()
-	local num = #friends
-	local shade = .25 + (num / 4)
-	if shade &gt; 1 then shade = 1 end
-
-	script.Parent.EggMesh4.VertexColor = Vector3.new(shade, shade, shade)
-
-	if (#friends &gt; 3) then
-		script.Parent.PickUpOk.Value = true
-	end
-end
-
-function tryAddFriend(str)
-	local s = string.lower(str)
-
-
-	for i=1,#friends do
-		if friends[i] == s then return end
-	end
-
-	friends[#friends + 1] = s 
-	updateEgg()
-
-	local sound = script.Parent:findFirstChild(&quot;Kerplunk&quot;)
-	if sound == nil then 
-		sound = Instance.new(&quot;Sound&quot;)
-		sound.Name = &quot;Kerplunk&quot;
-		sound.SoundId = &quot;rbxasset://sounds\\Kerplunk.wav&quot;
-		sound.Volume = 1
-		sound.Parent = script.Parent
-	end
-	sound:play()
-end
-
-function onTouch(part)
-	local h = part.Parent:FindFirstChild(&quot;Humanoid&quot;)
-	local player = game.Players:GetPlayerFromCharacter(part.Parent)
-	if (h ~= nil and player ~= nil) then
-		tryAddFriend(player.Name)
-	end
-end
-
-con = script.Parent.Touched:connect(onTouch)
-
-updateEgg()
-
-</string>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="SpecialMesh" referent="RBX8">
-			<Properties>
-				<Content name="MeshId"><url>http://www.roblox.com/asset/?id=1527559</url></Content>
-				<token name="MeshType">5</token>
-				<string name="Name">EggMesh4</string>
-				<Vector3 name="Scale">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<Content name="TextureId"><url>http://www.roblox.com/asset/?id=1529468</url></Content>
-				<Vector3 name="VertexColor">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="Script" referent="RBX9">
-			<Properties>
-				<bool name="Disabled">true</bool>
-				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">EggScript5</string>
-				<string name="Source">local con = nil
-
-script.Parent.EggMesh5.Scale = Vector3.new(16,16,16)
-script.Parent.Size = Vector3.new(32,32,32)
-
-function split()
-
-	local size = script.Parent.Size.x
-
-	if (size &gt; 2) then
-		local e = Instance.new(&quot;Explosion&quot;)
-		e.BlastRadius = size / 2
-		e.Position = script.Parent.Position + ( (size/4) * Vector3.new(math.random() - .5 , math.random() - .5, math.random() - .5) )
-		e.Parent = game.Workspace
-
-		script.Parent.Size = script.Parent.Size * .5
-		script.Parent.EggMesh5.Scale = script.Parent.EggMesh5.Scale * .5
-
-		local sound = script.Parent:findFirstChild(&quot;Split&quot;)
-		if sound == nil then 
-			sound = Instance.new(&quot;Sound&quot;)
-			sound.Name = &quot;Split&quot;
-			sound.Volume = 1
-			sound.SoundId = &quot;rbxasset://sounds\\Rocket shot.wav&quot;
-			sound.Parent = script.Parent
-		end
-		sound:play()
-	end
-
-	if (size == 4) then return true end
-
-	return false
-	
-end
-
-function OnTouch(part)
-	if (part.Anchored == false) then
-		if (part:GetMass() &lt; script.Parent:GetMass()) then	part:BreakJoints() end
-	end
-end
-
-
-
-
-con = script.Parent.Touched:connect(OnTouch)
-
-while true do
-	
-	wait(10)
-	if (split() == true) then break end
-
-end
-
-con:disconnect()
-
-script.Parent.PickUpOk.Value = true
-
-</string>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="SpecialMesh" referent="RBX10">
-			<Properties>
-				<Content name="MeshId"><url>http://www.roblox.com/asset/?id=1527559</url></Content>
-				<token name="MeshType">5</token>
-				<string name="Name">EggMesh5</string>
-				<Vector3 name="Scale">
-					<X>16</X>
-					<Y>16</Y>
-					<Z>16</Z>
-				</Vector3>
-				<Content name="TextureId"><url>http://www.roblox.com/asset/?id=1529456</url></Content>
-				<Vector3 name="VertexColor">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="Script" referent="RBX11">
-			<Properties>
-				<bool name="Disabled">true</bool>
-				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">EggScript6</string>
-				<string name="Source">script.Parent.PickUpOk.Value = true
-
-function blink()
-
-	local sound = script.Parent:findFirstChild(&quot;Blink&quot;)
-	if sound == nil then 
-		sound = Instance.new(&quot;Sound&quot;)
-		sound.Name = &quot;Blink&quot;
-		sound.SoundId = &quot;rbxasset://sounds\\HalloweenThunder.wav&quot;
-		sound.Volume = 1
-		sound.Parent = script.Parent
-	end
-	sound:play()
-
-	local dir = Vector3.new(math.random()-.5, math.random() / 2, math.random()-.5).unit
-
-	local dist = math.random(10,40)
-
-	script.Parent.Position = script.Parent.Position + (dir * dist)
-
-end
-
-while true do
-
-	wait(math.random(3,6))
-	blink()
-	
-end</string>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="SpecialMesh" referent="RBX12">
-			<Properties>
-				<Content name="MeshId"><url>http://www.roblox.com/asset/?id=1527559</url></Content>
-				<token name="MeshType">5</token>
-				<string name="Name">EggMesh6</string>
-				<Vector3 name="Scale">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<Content name="TextureId"><url>http://www.roblox.com/asset/?id=1529454</url></Content>
-				<Vector3 name="VertexColor">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="Script" referent="RBX13">
-			<Properties>
-				<bool name="Disabled">true</bool>
-				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">EggScript7</string>
-				<string name="Source">script.Parent.PickUpOk.Value = true
-
-while true do
-	
-	for i=0,10 do
-		script.Parent.Transparency = 1 - ((10-i)/10)
-		wait(.1)
-	end
-
-	wait(math.random(5,20))
-
-	for i=0,10 do
-		script.Parent.Transparency = (10-i)/10
-		wait(.1)
-	end
-	
-	wait(.5)
-	
-	
-end</string>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="SpecialMesh" referent="RBX14">
-			<Properties>
-				<Content name="MeshId"><url>http://www.roblox.com/asset/?id=1527559</url></Content>
-				<token name="MeshType">5</token>
-				<string name="Name">EggMesh7</string>
-				<Vector3 name="Scale">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<Content name="TextureId"><url>http://www.roblox.com/asset/?id=1529460</url></Content>
-				<Vector3 name="VertexColor">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="Script" referent="RBX15">
-			<Properties>
-				<bool name="Disabled">true</bool>
-				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">EggScript8</string>
-				<string name="Source">wait(6)
-script.Parent.PickUpOk.Value = true</string>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="SpecialMesh" referent="RBX16">
-			<Properties>
-				<Content name="MeshId"><url>http://www.roblox.com/asset/?id=1529081</url></Content>
-				<token name="MeshType">5</token>
-				<string name="Name">EggMesh8</string>
-				<Vector3 name="Scale">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<Content name="TextureId"><url>http://www.roblox.com/asset/?id=1529130</url></Content>
-				<Vector3 name="VertexColor">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="SpecialMesh" referent="RBX17">
-			<Properties>
-				<Content name="MeshId"><url>http://www.roblox.com/asset/?id=1527559</url></Content>
-				<token name="MeshType">5</token>
-				<string name="Name">EggMesh9</string>
-				<Vector3 name="Scale">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<Content name="TextureId"><url>http://www.roblox.com/asset/?id=1529461</url></Content>
-				<Vector3 name="VertexColor">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="Script" referent="RBX18">
-			<Properties>
-				<bool name="Disabled">true</bool>
-				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">EggScript9</string>
-				<string name="Source">script.Parent.PickUpOk.Value = true
-
-players = game:service(&quot;Players&quot;)
-
--- get the Rocket
-template = Instance.new(&quot;Part&quot;)
-template.Size = Vector3.new(1,1,6)
-template.BrickColor = BrickColor.new(24)
-template.Reflectance = .5
-template.Locked = true
-
-r = Instance.new(&quot;RocketPropulsion&quot;)
-r.MaxTorque = Vector3.new(4e5,4e5,4e5)
-r.Parent = template
-
-
-local bodypos = Instance.new(&quot;BodyPosition&quot;)
-bodypos.maxForce = Vector3.new(4e5,4e5,4e5)
-bodypos.Parent = script.Parent
-
-function bang(part)
-	local e = Instance.new(&quot;Explosion&quot;)
-	e.Position = part.Position
-	part.Parent = nil
-	e.Parent = workspace
-end
-
--- Targets a rocket and causes it to blow up on touch (arms it)
-function setTarget(propulsion, target)
-	local rocket = propulsion.Parent
-	propulsion.TargetOffset = Vector3.new(0,0,0)
-	propulsion.Target = target
-	return rocket.Touched:connect(function() bang(rocket) end)
-end
-
-function doHellfire()
-
-	local sound = script.Parent:findFirstChild(&quot;Boom&quot;)
-	if sound == nil then 
-		sound = Instance.new(&quot;Sound&quot;)
-		sound.Name = &quot;Boom&quot;
-		sound.SoundId = &quot;rbxasset://sounds\\HalloweenLightning.wav&quot;
-		sound.Volume = 1
-		sound.Parent = script.Parent
-	end
-	sound:play()
-
-	for i=0,10 do
-		script.Parent.Transparency = 1 - ((10-i)/10)
-		wait(.1)
-	end
-
-	for i=0,10 do
-		script.Parent.Transparency = (10-i)/10
-		wait(.1)
-	end
-
-
-	
-	local booms = 8
-	for i = 1,booms do
-
-		local a = i * ((3.14156 * 2) / booms) 
-		local x = 22 * math.cos(a)
-		local z = 22 * math.sin(a)
-
-
-		local ex = Instance.new(&quot;Explosion&quot;)
-		ex.BlastRadius = 12
-		ex.BlastPressure = 2000000
-		ex.Position = Vector3.new(script.Parent.Position.x + x, script.Parent.Position.y, script.Parent.Position.z + z)
-		ex.Parent = game.Workspace
-
-
-	end
-	
-
-end
-
-function shoot(player)
-	if player.Character then
-		if player.Character:FindFirstChild(&quot;BunnyEarsOfCaprice&quot;) ~= nil then return end
-		local target = player.Character.PrimaryPart
-		if target then
-			local rocket = template:clone()
-			rocket.Position = script.Parent.Position + Vector3.new(0,5,0)
-			rocket.Parent = workspace
-
-			local propulsion = rocket.RocketPropulsion
-
-			-- First the rocket flies upwards. 
-			-- When it reaches the first destination it targets the character&apos;s primary part
-			propulsion.TargetOffset = script.Parent.Position +  Vector3.new(0,10,0)
-			local bangConnection =
-			propulsion.ReachedTarget:connect(function() 
-				bangConnection = setTarget(propulsion, target) 
-			end)
-			propulsion:Fire()
-
-				local sound = script.Parent:findFirstChild(&quot;Fire&quot;)
-				if sound == nil then 
-					sound = Instance.new(&quot;Sound&quot;)
-					sound.Name = &quot;Fire&quot;
-					sound.SoundId = &quot;rbxasset://sounds\\Shoulder fired rocket.wav&quot;
-					sound.Volume = 1
-					sound.Parent = script.Parent
-				end
-				sound:play()
-
-			-- after 20 seconds kill the rocket
-			delay(20, function() 
-				-- stop blowing up on touch
-				bangConnection:disconnect()
-
-				-- fall out of the sky
-				propulsion:Abort() 
-
-				-- after a few more seconds blow up the dud rocket
-				wait(4) 
-				if rocket:IsDescendantOf(workspace) then 
-					bang(rocket)
-				end
-			end)		
-
-		end
-	end
-end
-
-function updatePos()
-
-	local nx = (math.random() - .5) * 20
-	local nz = (math.random() - .5) * 20
-	local ny = (math.random() - .5) * 20
-
-	local y = bodypos.position.y
-	if (y &lt; 0 and ny &lt; 0) then ny = -ny end
-	if (y &gt; 800 and ny &gt; 0) then ny = -ny end
-
-	bodypos.position = script.Parent.Position + Vector3.new(nx,ny,nz)
-end
-
-while true do
-
-
-	updatePos()
-
-
-	local ps = players:GetPlayers()
-	if #ps&gt;0 then
-		local i = math.random(1,#ps)
-		shoot(ps[i])
-	end
-
-	wait(math.random(3,6))
-
-	if (math.random(1,10) == 2) then doHellfire() end
-end</string>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="Script" referent="RBX19">
-			<Properties>
-				<bool name="Disabled">true</bool>
-				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">EggScript10</string>
-				<string name="Source">local f = Instance.new(&quot;BodyThrust&quot;)
-f.Parent = script.Parent
-f.force = Vector3.new(math.random() - .5, math.random() - .5, math.random() - .5) * 1e4
-f.location = Vector3.new(math.random() - .5, math.random() - .5, math.random() - .5) 
-wait(.1)
-f.Parent = nil
-
-function get20()
-
-	local dir = script.Parent.CFrame * Vector3.new(0,1,0)
-
-	dir = dir - script.Parent.Position
-
-	return dir.y &gt; .94
-	
-end
-
-
-function onTouch(part)
-	local h = part.Parent:FindFirstChild(&quot;Humanoid&quot;)
-	local player = game.Players:GetPlayerFromCharacter(part.Parent)
-	if (h ~= nil and player ~= nil) then
-		if get20() == false then
-			local e = Instance.new(&quot;Explosion&quot;)
-			e.BlastRadius = 20
-			e.Position = script.Parent.Position
-			e.Parent = game.Workspace
-		else
-			-- win
-		end
-	end
-end
-
-script.Parent.Touched:connect(onTouch)
-
-
-while true do
-
-	if (get20() == true) then
-		script.Parent.EggMesh10.VertexColor = Vector3.new(1,1,1)
-		script.Parent.PickUpOk.Value = true
-	else
-		script.Parent.EggMesh10.VertexColor = Vector3.new(1,0,0)
-		script.Parent.PickUpOk.Value = false
-	end
-
-	wait(.1)
-end</string>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="SpecialMesh" referent="RBX20">
-			<Properties>
-				<Content name="MeshId"><url>http://www.roblox.com/asset/?id=1529453</url></Content>
-				<token name="MeshType">5</token>
-				<string name="Name">EggMesh10</string>
-				<Vector3 name="Scale">
-					<X>5</X>
-					<Y>5</Y>
-					<Z>5</Z>
-				</Vector3>
-				<Content name="TextureId"><url>http://www.roblox.com/asset/?id=1529462</url></Content>
-				<Vector3 name="VertexColor">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="Script" referent="RBX21">
-			<Properties>
-				<bool name="Disabled">true</bool>
-				<Content name="LinkedSource"><null></null></Content>
-				<string name="Name">EggScript11</string>
-				<string name="Source">function hasCrown(char)
-	local c = char:GetChildren()
-
-	for i=1,#c do
-		if string.lower(c[i].Name) == &quot;voidstar&quot; or string.find(string.lower(c[i].Name), &quot;crown&quot;) ~= nil then
-			return true
-		end
-	end
-
-	return false
-end
-
-function winMessage(player)
-	script.Parent.PickUpOk.Value = true
-	script.Parent.EggMesh11.Scale = Vector3.new(1.5,1.5,1.5)
-	
-	-- kill all other messages
-	for i=1,#c do
-		if c[i].className == &quot;Message&quot; then c[i].Parent = nil end
-	end
-	
-	local m = Instance.new(&quot;Message&quot;)
-	m.Parent = player
-	m.Text = &quot;All hail the king!&quot;
-	wait(5)
-	m.Parent = nil
-end
-
-function getMsg()
-	local i = math.random(1,12)
-
-	if i == 1 then return &quot;Don&apos;t touch me, pleb.&quot; end
-	if i == 2 then return &quot;Ew. Get away.&quot; end
-	if i == 3 then return &quot;I&apos;m not for noobs&quot; end
-	if i == 4 then return &quot;You smell like a peasant.&quot; end
-	if i == 5 then return &quot;Serfs up :-(&quot; end
-	if i == 6 then return &quot;Have some class&quot; end
-	if i == 7 then return &quot;Away, commoner!&quot; end
-	if i == 8 then return &quot;Guards!&quot; end
-	if i == 9 then return &quot;You dress like a noob&quot; end
-	if i == 10 then return &quot;Go find the Egg of Poverty&quot; end
-	if i == 11 then return &quot;I&apos;m the Egg of KINGS. Fool.&quot; end
-	if i == 12 then return &quot;You dress like a noob&quot; end
-
-end
-
-function loseMessage(player)
-	local c = player:GetChildren()
-
-	-- kill all other messages
-	for i=1,#c do
-		if c[i].className == &quot;Message&quot; then c[i].Parent = nil end
-	end
-	
-	local m = Instance.new(&quot;Message&quot;)
-	m.Parent = player
-	m.Text = getMsg()
-	wait(5)
-	m.Parent = nil
-
-end
-
-
-function onTouch(part)
-	local h = part.Parent:FindFirstChild(&quot;Humanoid&quot;)
-	local player = game.Players:GetPlayerFromCharacter(part.Parent)
-	if (h ~= nil and player ~= nil and player.Character ~= nil) then
-		if hasCrown(player.Character) == true then
-			winMessage(player)
-		else
-			loseMessage(player)
-		end
-		wait(3)
-	end
-end
-
-script.Parent.Touched:connect(onTouch)</string>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-		<Item class="SpecialMesh" referent="RBX22">
-			<Properties>
-				<Content name="MeshId"><url>http://www.roblox.com/asset/?id=1527559</url></Content>
-				<token name="MeshType">5</token>
-				<string name="Name">EggMesh11</string>
-				<Vector3 name="Scale">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<Content name="TextureId"><url>http://www.roblox.com/asset/?id=1529457</url></Content>
-				<Vector3 name="VertexColor">
-					<X>1</X>
-					<Y>1</Y>
-					<Z>1</Z>
-				</Vector3>
-				<bool name="archivable">true</bool>
-			</Properties>
-		</Item>
-	</Item>
-</roblox>
