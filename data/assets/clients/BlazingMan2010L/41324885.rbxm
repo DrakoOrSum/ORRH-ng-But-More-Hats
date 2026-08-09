@@ -1,0 +1,563 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Model" referent="RBX0">
+		<Properties>
+			<CoordinateFrame name="ModelInPrimary">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<string name="Name">Elevator_4x4x8</string>
+			<Ref name="PrimaryPart">null</Ref>
+			<bool name="archivable">true</bool>
+		</Properties>
+		<Item class="Part" referent="RBX1">
+			<Properties>
+				<bool name="Anchored">false</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">0</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">26</int>
+				<CoordinateFrame name="CFrame">
+					<X>0</X>
+					<Y>40.5878105</Y>
+					<Z>0</Z>
+					<R00>0</R00>
+					<R01>0</R01>
+					<R02>-1</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>1</R20>
+					<R21>0</R21>
+					<R22>0</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">3</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<token name="Material">800</token>
+				<string name="Name">Platform</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>4</X>
+					<Y>0.400000006</Y>
+					<Z>3.19999981</Z>
+				</Vector3>
+			</Properties>
+			<Item class="Decal" referent="RBX2">
+				<Properties>
+					<token name="Face">1</token>
+					<string name="Name">Decal</string>
+					<float name="Shiny">20</float>
+					<float name="Specular">0</float>
+					<Content name="Texture"><url>http://www.roblox.com/asset?id=39253373</url></Content>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Part" referent="RBX3">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">2</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">26</int>
+				<CoordinateFrame name="CFrame">
+					<X>1.79992676</X>
+					<Y>44.1878204</Y>
+					<Z>0</Z>
+					<R00>0</R00>
+					<R01>0</R01>
+					<R02>-1</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>1</R20>
+					<R21>0</R21>
+					<R22>0</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">3</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<token name="Material">800</token>
+				<string name="Name">Floor</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>3.99999714</X>
+					<Y>7.60000038</Y>
+					<Z>0.400000036</Z>
+				</Vector3>
+			</Properties>
+		</Item>
+		<Item class="Part" referent="RBX4">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">2</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">141</int>
+				<CoordinateFrame name="CFrame">
+					<X>1.79992676</X>
+					<Y>48.1878242</Y>
+					<Z>0</Z>
+					<R00>0</R00>
+					<R01>0</R01>
+					<R02>-1</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>1</R20>
+					<R21>0</R21>
+					<R22>0</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">3</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<token name="Material">1536</token>
+				<string name="Name">SwitchTop</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>4</X>
+					<Y>0.400000036</Y>
+					<Z>0.400000036</Z>
+				</Vector3>
+			</Properties>
+		</Item>
+		<Item class="Part" referent="RBX5">
+			<Properties>
+				<bool name="Anchored">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">2</token>
+				<token name="BottomSurfaceInput">0</token>
+				<int name="BrickColor">1020</int>
+				<CoordinateFrame name="CFrame">
+					<X>-1.80000007</X>
+					<Y>40.6000023</Y>
+					<Z>0</Z>
+					<R00>-1</R00>
+					<R01>0</R01>
+					<R02>-0</R02>
+					<R10>-0</R10>
+					<R11>1</R11>
+					<R12>-0</R12>
+					<R20>-0</R20>
+					<R21>0</R21>
+					<R22>-1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="DraggingV1">false</bool>
+				<float name="Elasticity">0.5</float>
+				<token name="FormFactor">3</token>
+				<float name="Friction">0.300000012</float>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<token name="Material">1536</token>
+				<string name="Name">SwitchBottom</string>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">0</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<bool name="archivable">true</bool>
+				<token name="shape">1</token>
+				<Vector3 name="size">
+					<X>0.399999857</X>
+					<Y>0.400000036</Y>
+					<Z>4</Z>
+				</Vector3>
+			</Properties>
+		</Item>
+		<Item class="Script" referent="RBX6">
+			<Properties>
+				<bool name="Disabled">false</bool>
+				<Content name="LinkedSource"><null></null></Content>
+				<string name="Name">Script</string>
+				<ProtectedString name="Source">-- need to add a bodyPosition to prevent xz plane movement!!!
+
+local maxTimer = 20 -- make this a configuration folder parameter?
+local offColor = &quot;Earth green&quot;
+local onColor  = &quot;Lime green&quot;
+
+local switchBottom = script.Parent.SwitchBottom
+local switchTop = script.Parent.SwitchTop
+local platform = script.Parent.Platform
+--local position_up = Vector3.new(platform.Position.x, switchTop.Position.y, platform.Position.z)
+--local position_down = Vector3.new(platform.Position.x, switchBottom.Position.y, platform.Position.z)
+local topHeight = switchTop.Position.Y
+local bottomHeight = switchBottom.Position.Y
+
+goingUp = false
+
+local weight = script.Parent.invisiweight
+weight.CFrame = platform.CFrame
+local weightWeld = script.Parent.weightWeld
+weightWeld.Part0 = platform
+weightWeld.Part1 = weight
+weightWeld.C1 = platform.CFrame:inverse()*weight.CFrame
+
+
+--[[ switch script effects to platform
+script.AngleStabilizer.Parent = platform
+--script.PositionStabilizer.position = Vector3.new(-132, platform.Position.y, -567)
+script.PositionStabilizer.position = Vector3.new(platform.Position.X, platform.Position.y, platform.Position.Z)
+script.PositionStabilizer.Parent = platform
+script.Force.Parent = platform
+local posStabilizer = platform.PositionStabilizer
+]]--
+
+-- now we switch those effects to the weight instead
+script.AngleStabilizer.cframe = platform.CFrame
+script.AngleStabilizer.Parent = weight
+script.PositionStabilizer.position = Vector3.new(platform.Position.X, platform.Position.Y, platform.Position.Z)
+script.PositionStabilizer.Parent = weight
+script.Force.Parent = weight
+local posStabilizer = weight.PositionStabilizer
+
+local miniListenerEnabled = true
+function switchTopListener(part)
+		if part ~= nil and part.Parent == script.Parent then return end
+		if miniListenerEnabled then
+		miniListenerEnabled = false
+		--platform.PositionStabilizer.maxForce = Vector3.new(400000, 0, 400000)
+		posStabilizer.maxForce = Vector3.new(400000, 0, 400000)
+	-- called when we touch the top switch.
+	--platform.Force.position = position_up
+	if (platform.Position.Y &lt; topHeight) then
+		platform.Anchored = false
+		--platform.Force.velocity = Vector3.new(0, 2, 0)
+		weight.Force.velocity = Vector3.new(0, 2, 0)
+
+		switchTop.BrickColor = BrickColor.new(onColor)
+		switchBottom.BrickColor = BrickColor.new(offColor)
+		--print(&quot;switchTop. force: &quot; .. platform.Force.velocity.y)
+		--print(&quot;maxForce: &quot; .. platform.Force.maxForce.x)
+		goingUp = true
+		script.Timer.Value = maxTimer -- if we don&apos;t reach destination in maxTimer seconds, &quot;safety mode&quot; turns on and elevator direction reverses
+	end
+	miniListenerEnabled = true
+	end
+end
+
+function switchBottomListener(part)
+		if part ~= nil and part.Parent == script.Parent then return end
+		if miniListenerEnabled then
+		miniListenerEnabled = false
+		--platform.PositionStabilizer.maxForce = Vector3.new(400000, 0, 400000)
+		posStabilizer.maxForce = Vector3.new(400000, 0, 400000)
+	-- called when we touch the bottom switch.
+	--platform.Force.position = position_down
+	if (platform.Position.Y &gt; bottomHeight) then
+		platform.Anchored = false
+		--platform.Force.velocity = Vector3.new(0,-2, 0)
+		weight.Force.velocity = Vector3.new(0,-2,0)
+		switchBottom.BrickColor = BrickColor.new(onColor)
+		switchTop.BrickColor = BrickColor.new(offColor)
+		--print(&quot;switchBottom. force: &quot; .. platform.Force.velocity.y)
+		--print(&quot;maxForce: &quot; .. platform.Force.maxForce.x)
+		goingUp = false
+		script.Timer.Value = maxTimer -- if we don&apos;t reach destination in maxTimer seconds, &quot;safety mode&quot; turns on and elevator direction reverses
+	end
+	miniListenerEnabled = true
+	end
+end
+
+local numTimes = 0
+local listenerEnabled = true
+function platformListener(part)
+	-- when you walk onto the platform, and it&apos;s stopped at either top or bottom, trigger it after a short delay.
+	print(&quot;platformListener&quot;)
+	if part == nil then return end
+	if part.Parent == nil then return end
+	if platform.Anchored and part.Parent ~= script.Parent and listenerEnabled then
+		listenerEnabled = false	
+		print(numTimes)
+		numTimes = numTimes+1
+		print(part)
+		wait(1.5)
+		if goingUp then
+			switchBottomListener(part)
+		else
+			switchTopListener(part)
+		end
+		listenerEnabled = true
+	end
+
+	--[[if(platform.Position == position_up) then  -- if goingUp
+		print(&quot;platformListener: down&quot;)
+		switchBottomListener(part)
+	elseif(platform.Position == position_down) then  -- just else
+		print(&quot;platformListener: up&quot;)
+		switchTopListener(part)
+	end]]--
+end
+
+--switchBottomListener(platform) -- on init, go to bottom.
+--platform.Force.maxForce = Vector3.new(1e+100,1e+100,1e+100)
+-- platform.Force.P = 1e+10
+switchBottom.Touched:connect(switchBottomListener)
+switchTop.Touched:connect(switchTopListener)
+platform.Touched:connect(platformListener)
+
+while true do
+	if not platform.Anchored then
+		if goingUp then
+			if platform.Position.Y &gt; topHeight then
+				--platform.Force.velocity = Vector3.new(0,0,0)
+				--platform.Velocity = Vector3.new(0,0,0)
+				weight.Force.velocity = Vector3.new(0,0,0)
+				weight.Velocity = Vector3.new(0,0,0)
+				platform.CFrame = platform.CFrame + Vector3.new(0, topHeight - platform.Position.Y, 0)
+				platform.Anchored = true
+				script.Timer.Value = maxTimer
+			else
+				--platform.Force.velocity = Vector3.new(0,2,0)
+				if script.Timer.Value &lt;= 0 then
+					switchBottomListener(nil)
+				else weight.Force.velocity = Vector3.new(0,2,0) end
+			end
+		else
+			if platform.Position.Y &lt; bottomHeight then
+				--platform.Force.velocity = Vector3.new(0,0,0)
+				--platform.Velocity = Vector3.new(0,0,0)
+				weight.Force.velocity = Vector3.new(0,0,0)
+				weight.Velocity = Vector3.new(0,0,0)
+				platform.CFrame = platform.CFrame + Vector3.new(0, bottomHeight - platform.Position.Y, 0)
+				platform.Anchored = true
+				script.Timer.Value = maxTimer
+			else
+				--platform.Force.velocity = Vector3.new(0,-2,0)
+				if script.Timer.Value &lt;= 0 then
+					switchTopListener(nil)
+				else weight.Force.velocity = Vector3.new(0,-2,0) end
+			end
+		end
+		script.Timer.Value = script.Timer.Value - .1
+	end
+
+	wait(.1)
+end
+
+
+</ProtectedString>
+				<bool name="archivable">true</bool>
+			</Properties>
+			<Item class="BodyPosition" referent="RBX7">
+				<Properties>
+					<float name="D">1250</float>
+					<string name="Name">PositionStabilizer</string>
+					<float name="P">10000</float>
+					<bool name="archivable">true</bool>
+					<Vector3 name="maxForce">
+						<X>400000</X>
+						<Y>0</Y>
+						<Z>400000</Z>
+					</Vector3>
+					<Vector3 name="position">
+						<X>0</X>
+						<Y>50</Y>
+						<Z>0</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="BodyVelocity" referent="RBX8">
+				<Properties>
+					<string name="Name">Force</string>
+					<float name="P">1250</float>
+					<bool name="archivable">true</bool>
+					<Vector3 name="maxForce">
+						<X>3.99999994e+018</X>
+						<Y>3.99999994e+018</Y>
+						<Z>3.99999994e+018</Z>
+					</Vector3>
+					<Vector3 name="velocity">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="BodyGyro" referent="RBX9">
+				<Properties>
+					<float name="D">500</float>
+					<string name="Name">AngleStabilizer</string>
+					<float name="P">10000000</float>
+					<bool name="archivable">true</bool>
+					<CoordinateFrame name="cframe">
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+						<R00>1</R00>
+						<R01>0</R01>
+						<R02>0</R02>
+						<R10>0</R10>
+						<R11>1</R11>
+						<R12>0</R12>
+						<R20>0</R20>
+						<R21>0</R21>
+						<R22>1</R22>
+					</CoordinateFrame>
+					<Vector3 name="maxTorque">
+						<X>9.99999998e+018</X>
+						<Y>9.99999998e+018</Y>
+						<Z>9.99999998e+018</Z>
+					</Vector3>
+				</Properties>
+			</Item>
+			<Item class="NumberValue" referent="RBX10">
+				<Properties>
+					<string name="Name">Timer</string>
+					<double name="Value">0</double>
+					<bool name="archivable">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+</roblox>
